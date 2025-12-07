@@ -8,6 +8,7 @@ body {
     padding: 0;
     background-color: #fff7ed;
     font-family: "Inter", sans-serif;
+     height: 100%;  
 }
 
 a {
@@ -15,41 +16,38 @@ a {
     color: unset;
 }
 
-body::-webkit-scrollbar {
-    display: none;
-}
 
-body {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+
+.site-wrapper > main {
+    flex: 1 1 auto;
+    min-height: 0;
 }
 
 .site-wrapper {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-    height: 110px;
+    padding: 1.5em 1.2em;
     display: flex;
     align-items: center;
-    padding-block: 10px;
+    justify-content: space-between;
+    gap:15px ;
 }
 
 header .site-logo {
     color: black;
-    margin-right: auto;
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 25px;
+    font-size: 1.5rem;
 }
 
 header a {
     text-decoration: none;
     color: #4d4d4d;
     font-weight: 600;
-    padding: 5px 20px;
 }
 
 header a:hover {
@@ -69,21 +67,17 @@ header .login-link {
 
 nav {
     display: flex;
-}
-
-main {
-    margin-bottom: 84px;
+    align-items: center;
+    gap:6px;
 }
 
 footer {
     background-color: #161616;
     color: #aaaaaa;
-    height: 74px;
+    padding: 1.5em 2.5em;
     display: flex;
-    flex-shrink: 0;
     justify-content: center;
     align-items: center;
-    margin-top: auto;
     font-weight: 500;
 }
 
@@ -104,7 +98,7 @@ footer {
     display: block;
     color: black;
     text-decoration: none;
-    margin-left: 26px;
+    margin-left: 1.625em;
 }
 
 .back-button span:hover {
@@ -119,13 +113,10 @@ footer {
 .home-container {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)),
         url("./assets/images/home-hero.png") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
-    min-height: 350px;
     color: white;
     padding: 45px 23px;
+    height: 90vh;
 }
 
 .home-container h1 {
@@ -145,7 +136,7 @@ footer {
     background-color: #ff8c38;
     border: none;
     width: 100%;
-    margin-top: 27px;
+    margin-top: 1.688em;
     padding-block: 0.75rem;
     color: white;
     font-weight: 700;
@@ -184,6 +175,7 @@ footer {
     padding-bottom: 32px;
     margin-inline: 27px;
     border-radius: 5px;
+    margin-bottom: 1em;
 }
 
 .about-page-cta h2 {
@@ -200,6 +192,7 @@ footer {
 /*** VAN PAGES ***/
 .van-list-container {
     padding-inline: 23px;
+    margin-bottom: 2em;
 }
 
 .van-list-filter-buttons {
@@ -292,6 +285,7 @@ i[class*="van-type-"] {
 
 .van-detail-container {
     padding-inline: 27px;
+    margin-bottom: 2em;
 }
 
 .van-detail-container .back-button {
@@ -299,8 +293,6 @@ i[class*="van-type-"] {
     text-decoration: none;
 }
 
-.van-detail-container .back-button:visited {
-}
 
 .van-detail-container .back-button span {
     text-decoration: underline;
